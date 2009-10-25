@@ -22,7 +22,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            class="de.ralfebert.rcpmvc.spring.ViewFactory"
+            class="de.ralfebert.rcpmvc.spring.SpringViewFactory"
             id="com.example.rcpmvc.demo.calculator"
             name="Calculator"
             restorable="true">
