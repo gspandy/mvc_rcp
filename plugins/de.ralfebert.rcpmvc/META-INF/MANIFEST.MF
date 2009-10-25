@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rcpmvc
+Bundle-SymbolicName: de.ralfebert.rcpmvc
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.ui;visibility:=reexport,
+ org.eclipse.core.runtime;visibility:=reexport,
+ org.eclipse.springframework.util;bundle-version="1.0.3";visibility:=reexport,
+ org.eclipse.riena.client;bundle-version="1.1.0";visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.ralfebert.rcpmvc.base,
+ de.ralfebert.rcpmvc.contracts,
+ de.ralfebert.rcpmvc.spring,
+ de.ralfebert.rcpmvc.util.slot

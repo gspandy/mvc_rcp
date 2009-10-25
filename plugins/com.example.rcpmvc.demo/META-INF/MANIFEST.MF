@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rcpmvc
+Bundle-SymbolicName: com.example.rcpmvc.demo;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.example.rcpmvc.demo.Activator
+Bundle-Vendor: EXAMPLE
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.ralfebert.rcpmvc;bundle-version="1.0.0"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="com.example.rcpmvc.demo.calculator" class="com.example.rcpmvc.demo.CalculatorController" scope="prototype">
+    	<property name="view">
+    		<bean class="com.example.rcpmvc.demo.CalculatorView"/>
+    	</property>
+    	<property name="model">
+    		<bean class="com.example.rcpmvc.demo.CalculatorModel"/>
+    	</property>
+    </bean>
+
+</beans>
