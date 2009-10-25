@@ -71,6 +71,10 @@ public abstract class PassiveViewPart extends ViewPart implements IPassiveView {
 		}
 
 	}
+
+	protected void addUIControl(Object uiControl, String propertyName) {
+		delegate.addUIControl(uiControl, propertyName);
+	}
 	
 	private boolean isChildOfComplexComponent(Control uiControl) {
 
