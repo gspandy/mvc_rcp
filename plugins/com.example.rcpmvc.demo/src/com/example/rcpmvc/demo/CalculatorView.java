@@ -1,9 +1,11 @@
 package com.example.rcpmvc.demo;
 
+import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.riena.ui.swt.utils.UIControlsFactory;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Text;
 
 import de.ralfebert.rcpmvc.base.PassiveViewPart;
 
@@ -13,16 +15,18 @@ public class CalculatorView extends PassiveViewPart {
 
 	@Override
 	public void basicCreatePartControl(Composite parent) {
-		RowLayout layout = new RowLayout();
-		layout.spacing = 10;
-		layout.marginHeight = 5;
-		layout.marginWidth = 5;
-		parent.setLayout(layout);
+		setPartName("Calculator");
 		
-		UIControlsFactory.createText(parent, SWT.BORDER, "nr1");
-		UIControlsFactory.createText(parent, SWT.BORDER, "nr2");
+		Text nr1 = UIControlsFactory.createText(parent, SWT.BORDER, "nr1");
+		Text nr2 = UIControlsFactory.createText(parent, SWT.BORDER, "nr2");
 		UIControlsFactory.createButton(parent, "Calculate", "calculate");
-		UIControlsFactory.createText(parent, SWT.BORDER, "result");
+		Text result = UIControlsFactory.createText(parent, SWT.BORDER, "result");
+
+		GridLayoutFactory.fillDefaults().numColumns(4).spacing(5, 3).margins(5, 5).applyTo(parent);
+		GridDataFactory widthHint = GridDataFactory.fillDefaults().hint(80, SWT.DEFAULT);
+		widthHint.applyTo(nr1);
+		widthHint.applyTo(nr2);
+		widthHint.applyTo(result);
 	}
 
 }
